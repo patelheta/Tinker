@@ -12,19 +12,16 @@
 // output = [10, 14]
 
 const minMaxSum = function(arrayNumbers) {
-  let minMax = [];
-  let min = 0;
-  for (num of arrayNumbers) {
-    if (num < min) {
-      num += min;
-      minMax.push(min);
-    }
-    if (num > min) {
-      num += min;
-      minMax.push(min);
-    }
+  arr.sort();
+  let minimum = 0;
+  let maximun = 0;
+  for (let i = 1; i < arr.length; i++) {
+    maximun += arr[i];
   }
-  return minMax;
+  for (let i = 0; i < arr.length - 1; i++) {
+    minimum += arr[i];
+  }
+  console.log(`${minimum} ${maximun}`);
 };
 
 console.log(minMaxSum([1, 2, 3, 4, 5]))
